@@ -2,6 +2,7 @@ FROM openjdk:17-slim
 
 # 作業ディレクトリを作成
 WORKDIR /app
+COPY target/*.jar app.jar
 
 # Maven をインストール
 RUN apt-get update && apt-get install -y maven
